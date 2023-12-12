@@ -18,7 +18,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function Combobox({ options, placeholder, handleChange }: any) {
+const Combobox = ({ options, placeholder, handleChange }: any) => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -68,4 +68,5 @@ export function Combobox({ options, placeholder, handleChange }: any) {
       </PopoverContent>
     </Popover>
   );
-}
+};
+export default Combobox;
