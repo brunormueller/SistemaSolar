@@ -53,8 +53,7 @@ const StepperEtapa = ({
     if (dadosGerados && activeStep === 0) {
       handleNext();
     }
-    console.log(completed);
-  }, [dadosGerados]);
+  }, [dadosGerados, steps, activeStep, edicaoDados]);
 
   const completedSteps = () => {
     return Object.keys(completed).length;

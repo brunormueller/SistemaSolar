@@ -6,7 +6,8 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { IoReturnUpBackOutline } from "react-icons/io5";
 import LoaderSun from "../../components/common/Loader/LoaderSun";
-import { Combobox } from "../CXESCRM002/kanbanProjeto/propostas/combobox";
+import Combobox from "../CXESCRM002/kanbanProjeto/propostas/combobox";
+// import { Combobox } from "../CXESCRM002/kanbanProjeto/propostas/combobox";
 
 const Distribuidores = ({
   componentesKit,

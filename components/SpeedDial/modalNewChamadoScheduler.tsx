@@ -84,7 +84,7 @@ const NewChamadoScheduler = ({
       });
     };
     buscarUsuario();
-  }, []);
+  }, [id_usuario]);
 
   return (
     <>

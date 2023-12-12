@@ -116,7 +116,7 @@ const NewContactScheduler = ({
       });
     };
     buscarUsuario();
-  }, []);
+  }, [id_usuario]);
 
   return (
     <>

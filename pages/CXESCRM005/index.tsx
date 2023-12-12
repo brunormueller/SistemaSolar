@@ -6,7 +6,7 @@ import PDFViewer from "@/components/PdfViewer/PDFViewer";
 import StepperEtapa from "@/components/Stepper/Stepper";
 import LoaderSun from "@/components/common/Loader/LoaderSun";
 import Distribuidores from "@/pages/CXESCRM005/CardDistribuidores";
-import { ComponentesKit } from "@/pages/CXESCRM005/ComponentesKit";
+import ComponentesKit from "@/pages/CXESCRM005/ComponentesKit";
 import DadosGerais from "@/pages/CXESCRM005/DadosGerais";
 import ItensMarkup from "@/pages/CXESCRM005/ItensMarkup";
 import ObservaçãoColeta from "@/pages/CXESCRM005/Observação";

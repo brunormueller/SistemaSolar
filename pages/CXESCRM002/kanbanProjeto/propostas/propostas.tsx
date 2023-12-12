@@ -7,8 +7,8 @@ import { ArrowLeft, Download, FilePlus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { BiLogoWhatsapp } from "react-icons/bi";
 import Swal from "sweetalert2";
-import { Combobox } from "./combobox";
-import { DatePickerWithRange } from "./filtroData";
+import Combobox from "./combobox";
+import DatePickerWithRange from "./filtroData";
 import {
   Accordion,
   AccordionContent,
