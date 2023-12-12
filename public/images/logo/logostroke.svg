@@ -1,0 +1,40 @@
+<svg width="376" height="375" viewBox="0 0 376 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+#firstLink{
+    stroke-dasharray: 800;
+    stroke-dashoffset : 0;
+    -webkit-animation: dash 1s infinite forwards
+}
+#secondLink{
+    stroke-dasharray: 1100;
+    stroke-dashoffset : 9;
+    -webkit-animation: dash2 1s infinite forwards
+}
+#thirdLink{
+    stroke-dasharray: 1100;
+    stroke-dashoffset : 0;
+    -webkit-animation: dash2 1s infinite forwards
+}
+@-webkit-keyframes dash{
+    from{   
+        stroke-dashoffset: 800;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@-webkit-keyframes dash2{
+    from{
+        stroke-dashoffset: 1100;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+</style>
+</defs>
+<path id="firstLink" d="M2 219V83L80.5 4V139L2 219Z" stroke="#5FC0D3" stroke-width="3"/>
+<path id="secondLink" d="M2 235L80.5 154.5L81 294.5H371L292.5 373.5H2V235Z" stroke="#5FC0D3" stroke-width="3"/>
+<path id="thirdLink" d="M100.5 141.5L253.5 13.5H371.5L217 144.5L371 282.5H255L100.5 141.5Z" stroke="#efcd14" stroke-width="3"/>
+</svg>

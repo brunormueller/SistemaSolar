@@ -1,0 +1,350 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+
+.dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+}
+
+/* @layer base { */
+body {
+    @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1;
+}
+/* } */
+
+body .focus\:ring-offset-2:focus {
+    --tw-ring-offset-width: 0px;
+}
+
+body .focus\:ring-1:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+        var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+        calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: #80caee !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+body .focus\:ring-2:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+        var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+        calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+        var(--tw-shadow, 0 0 #0000);
+}
+.asideModalCard::-webkit-scrollbar {
+    display: none;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload-files-container {
+    width: 420px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drag-file-area {
+    /* border: 2px dashed #1627c2; */
+    border-radius: 40px;
+    width: min-content;
+    text-align: center;
+}
+
+.drag-file-area h3 {
+    font-size: 26px;
+    margin: 15px 0;
+}
+.drag-file-area label {
+    font-size: 19px;
+}
+.drag-file-area label .browse-files-text {
+    color: #2c36bf;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.apx-legend-position-left {
+    position: static !important;
+}
+.browse-files span {
+    position: relative;
+    top: -25px;
+}
+.default-file-input {
+    opacity: 0;
+}
+.cannot-upload-message {
+    background-color: #ffc6c4;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px 10px 5px 30px;
+    border-radius: 5px;
+    color: #bb0000;
+    display: none;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.cannot-upload-message span,
+.upload-button-icon {
+    padding-right: 10px;
+}
+.cannot-upload-message span:last-child {
+    padding-left: 20px;
+    cursor: pointer;
+}
+.file-block {
+    color: #f7fff7;
+    background-color: #7b2cbf;
+    transition: all 1s;
+    width: 390px;
+    position: relative;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.file-info {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.file-icon {
+    margin-right: 10px;
+}
+.file-name,
+.file-size {
+    padding: 0 3px;
+}
+.remove-file-icon {
+    cursor: pointer;
+}
+.progress-bar {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 4.5%;
+    width: 0;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #4bb543;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.upload-button {
+    background-color: #1063df;
+    color: #f7fff7;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 7.5px 50px;
+    cursor: pointer;
+}
+/* @layer utilities { */
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.chat-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+}
+.inbox-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+}
+/* } */
+
+/* third-party libraries CSS */
+
+:is(.dark .css-1dimb5e-singleValue, .dark .cs-166bipr-Input > input) {
+    color: rgb(174 183 192 / var(--tw-text-opacity));
+}
+
+:is(.dark .css-t3ipsp-control) {
+    background-color: rgb(28 36 52 / var(--tw-bg-opacity));
+}
+
+:is(.dark .css-13cymwt-control) {
+    background-color: rgb(22 42 57 / var(--tw-bg-opacity));
+
+    /* z-index: 99999999; */
+}
+
+body .css-1fdsijx-ValueContainer,
+body .css-3w2yfm-ValueContainer {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+body .css-1jqq78o-placeholder {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+:is(.dark .css-166bipr-Input) {
+    color: rgb(174 183 192 / var(--tw-text-opacity));
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+input {
+    color: rgb(51, 51, 51);
+}
+
+.dark input {
+    color: rgb(174, 183, 192);
+}
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem horizontal */
+    height: 12px; /* Altura da barra de rolagem vertical */
+    /* background-color: #f1f1f1; */
+    background-color: rgba(
+        241,
+        241,
+        241,
+        0
+    ); /* Cor de fundo da barra de rolagem */
+    border-radius: 8px; /* Arredonda as bordas da barra de rolagem */
+}
+
+/* Estiliza a alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(50, 67, 88); /* Cor da alça */
+    border: 2px solid #ccc;
+    border-radius: 8px; /* Arredonda as bordas da barra de rolagem */
+}
+
+/* Estiliza a alça da barra de rolagem quando o mouse está sobre ela */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(
+        42,
+        55,
+        71
+    ); /* Cor da alça ao passar o mouse sobre ela */
+}
+
+.ant-btn-primary {
+    background-color: #38a0ff;
+}
+
+#__next
+    > div.dark\:bg-boxdark-2.dark\:text-bodydark
+    > div
+    > div
+    > main
+    > div
+    > div.gap-9.sm\:grid-cols-2
+    > div
+    > div
+    > div
+    > section
+    > div
+    > div
+    > div
+    > div
+    > div:nth-child(2) {
+    z-index: 0 !important;
+}
+
+#__next
+    > div.dark\:bg-boxdark-2.dark\:text-bodydark
+    > div
+    > div
+    > main
+    > div
+    > div.gap-9.sm\:grid-cols-2
+    > div
+    > div
+    > div
+    > section
+    > div
+    > div
+    > div
+    > div
+    > div:nth-child(3) {
+    position: unset !important;
+}
+
+.swal2-container {
+    z-index: 20000 !important;
+}
+
+/* input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: button;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+} */
+
+/* input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: button;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px;
+} */

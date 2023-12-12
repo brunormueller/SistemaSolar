@@ -1,0 +1,168 @@
+.navButton {
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.navButton:before {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 1);
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /* transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                height 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                opacity 0ms linear 0ms; */
+  /* animation: clickEffect 20ms; */
+}
+
+.dark .navButton:before {
+  /* background-color: rgba(0, 0, 0, 1); */
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.navButton:active:before {
+  animation: clickEffect 150ms;
+}
+
+.dark .navButton:hover:active:not(:disabled) {
+  /* transition: 600ms; */
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navButton:hover:active:not(:disabled) {
+  /* transition: 600ms; */
+  background-color: rgba(100, 100, 100, 0.4);
+  /* color: #fff; */
+  color: inherit;
+}
+
+@keyframes clickEffect {
+  0% {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.navButton:disabled {
+  /* color: rgba(255, 255, 255, 0.3); */
+  opacity: 0.5;
+}
+
+.dark .navButton:hover {
+  color: inherit;
+}
+
+.navButton:hover:not(:disabled, :active) {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.dark .navButton:hover:not(:disabled, :active) {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tableSection .navButton.buttonWarning {
+  background-color: rgb(136, 178, 225);
+  color: #fff;
+}
+
+.tableSection .navButton.buttonSuccess {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.tableSection .navButton.buttonDanger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.tableSection .navButton.buttonInfo:hover {
+  background-color: rgba(0, 0, 250, 1);
+  color: #fff;
+}
+
+.tableSection .navButton.buttonPrimary:hover {
+  background-color: rgba(0, 250, 250, 1);
+}
+
+.tableSection .navButton.buttonSecondary:hover {
+  background-color: rgba(250, 250, 0, 1);
+}
+
+.tableSection .navButton.buttonLight:hover {
+  background-color: rgba(250, 250, 250, 1);
+}
+
+.tableSection .navButton.buttonDark:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.tableSection tr:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.tableSection td,
+.tableSection th {
+  border-bottom: 1px solid rgb(81, 81, 81);
+  white-space: nowrap;
+  padding: 5px 16px;
+  /* text-align: center; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center */
+}
+
+.tableSection th {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}
+
+.resizer.isResizing {
+  opacity: 0.5;
+}
+
+@media (hover: hover) {
+  .resizer {
+    opacity: 0;
+  }
+
+  *:hover > .resizer {
+    opacity: 1;
+  }
+}
