@@ -2,11 +2,12 @@ const Drag = (): void => {
   const draggables = document.querySelectorAll<HTMLElement>('.task');
   const droppables = document.querySelectorAll<HTMLElement>('.swim-lane');
 
-  draggables.forEach((task) => {
+  draggables.forEach((task) => {     
     task.addEventListener('dragstart', () => {
-      task.classList.add('is-dragging');
+      task.classList.add('is-dragging');     
     });
     task.addEventListener('dragend', () => {
+      
       task.classList.remove('is-dragging');
     });
   });
